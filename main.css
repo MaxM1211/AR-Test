@@ -1,3 +1,9 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+    background: black;
+}
+
 .arjs-loader {
     height: 100%;
     width: 100%;
