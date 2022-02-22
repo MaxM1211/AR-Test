@@ -10,6 +10,8 @@
     <!-- rawgithack development URL -->
     <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
     <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+    <script src="gesture-detector.js"></script>
+    <script src="gesture-handler.js"></script>
 
 </head>
 
@@ -19,12 +21,12 @@
     <div class="arjs-loader">
         <div class="loader"></div>
     </div>
-    <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+    <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' gesture-detector id="scene">
 
         <!-- Absolute Path to Marker files without file extension (.fset;.fset3;.iset) -->
-        <a-nft type='nft' url='https://maxm1211.github.io/AR-Test/assets/speedup_wallpaper' smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+        <a-nft type='nft' url='https://maxm1211.github.io/AR-Test/assets/speedup_wallpaper' smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5' raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <!-- Absolute Path to .gltf File -->
-            <a-entity gltf-model='https://maxm1211.github.io/AR-Test/assets/speedupchange.gltf' scale="1 1 1" position="50 50 -25" rotation="-115 0 0">
+            <a-entity gltf-model='https://maxm1211.github.io/AR-Test/assets/speedupchange.gltf' scale="1 1 1" position="50 50 -25" rotation="-115 0 0" gesture-handler class="clickable">
             </a-entity>
         </a-nft>
         <a-entity camera></a-entity>
