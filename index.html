@@ -33,7 +33,7 @@
 
 <body>
     <a href="https://www.bbraun.com/en.html" target="_blank">
-        <div class="branding">&copy; B. Braun 15:30 Uhr</div>
+        <div class="branding">&copy; B. Braun</div>
     </a>
     <!-- minimal loader shown until image descriptors are loaded -->
     <div class="arjs-loader">
@@ -42,7 +42,7 @@
     <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' gesture-detector id="scene">
 
         <!-- Absolute Path to Marker files without file extension (.fset;.fset3;.iset) -->
-        <a-nft type='nft' url='https://maxm1211.github.io/AR-Test/assets/speedup_wallpaper' smooth='true' smoothCount='100' smoothTolerance='0.01' smoothThreshold='500' raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+        <a-nft type='nft' url='https://maxm1211.github.io/AR-Test/assets/speedup_wallpaper' smooth='true' smoothCount='1' smoothTolerance='0.01' smoothThreshold='5' raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <!-- Absolute Path to .gltf File -->
             <a-entity gltf-model='https://maxm1211.github.io/AR-Test/assets/speedupchange.gltf' scale="1 1 1" position="50 100 -50" rotation="0 0 0" gesture-handler class="clickable">
             </a-entity>
