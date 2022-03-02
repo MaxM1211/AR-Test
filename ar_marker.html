@@ -10,7 +10,7 @@
 
     <meta name="thumbnail" content="https://maxm1211.github.io/AR-Test/assets/favicon.png">
 
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <!--
     <script src="gesture-detector.js"></script>
@@ -24,7 +24,7 @@
         <div class="branding">&copy; B. Braun</div>
     </a>
 
-    <a-scene embedded arjs>
+    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' renderer='precision: medium;'>
         <a-marker type="pattern" url="https://maxm1211.github.io/AR-Test/assets/pattern-speedup_wallpaper.patt">
             <a-entity position="0 0 0" scale="0.05 0.05 0.05" gltf-model="https://maxm1211.github.io/AR-Test/assets/speedupchange.gltf"></a-entity>
         </a-marker>
