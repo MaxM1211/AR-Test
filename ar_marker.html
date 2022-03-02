@@ -12,10 +12,8 @@
 
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <!--
     <script src="gesture-detector.js"></script>
     <script src="gesture-handler.js"></script>
-    -->
 </head>
 
 
@@ -24,9 +22,9 @@
         <div class="branding">&copy; B. Braun</div>
     </a>
 
-    <a-scene embedded arjs='sourceType: webcam;'>
+    <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' gesture-detector id="scene">
         <a-marker type="pattern" url="https://maxm1211.github.io/AR-Test/assets/pattern-speedup_wallpaper.patt">
-            <a-entity position="0 0 0" scale="0.025 0.025 0.025" gltf-model="https://maxm1211.github.io/AR-Test/assets/speedupchange.gltf"></a-entity>
+            <a-entity gltf-model='https://maxm1211.github.io/AR-Test/assets/speedupchange.gltf' scale="0.025 0.025 0.025" position="0 0 0" rotation="0 0 0" gesture-handler class="clickable">
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
