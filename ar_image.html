@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <meta name="description" content="Schau dir das 3D Modell an indem du das Wallpaper scannst.">
 
-    <meta name="thumbnail" content="https://maxm1211.github.io/AR-Test/assets/favicon.png">
+    <meta name="thumbnail" content="https://ar.werk39.rocks/assets/favicon.png">
 
     <!-- rawgithack development URL -->
     <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
@@ -29,9 +29,9 @@
     <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' gesture-detector id="scene">
 
         <!-- Absolute Path to Marker files without file extension (.fset;.fset3;.iset) -->
-        <a-nft type='nft' url='https://maxm1211.github.io/AR-Test/assets/speedup_wallpaper' smooth='true' smoothCount='1' smoothTolerance='0.01' smoothThreshold='5' raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+        <a-nft type='nft' url='https://ar.werk39.rocks/assets/speedup_wallpaper' smooth='true' smoothCount='1' smoothTolerance='0.01' smoothThreshold='5' raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <!-- Absolute Path to .gltf File -->
-            <a-entity gltf-model='https://maxm1211.github.io/AR-Test/assets/speedupchange.gltf' scale="1 1 1" position="50 100 -50" rotation="0 0 0" gesture-handler class="clickable">
+            <a-entity gltf-model='https://ar.werk39.rocks/assets/speedupchange.gltf' scale="1 1 1" position="50 100 -50" rotation="0 0 0" gesture-handler class="clickable">
             </a-entity>
         </a-nft>
         <a-entity camera></a-entity>
