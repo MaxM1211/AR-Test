@@ -2,7 +2,6 @@
 <html lang="de">
 
 <head>
-
     <title>speed up change</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,14 +15,20 @@
     <meta property="og:url" content="https://ar.werk39.rocks/" />
     <meta property="og:image" content="https://ar.werk39.rocks/assets/speedupchange.jpg" />
 
-    <script language="javascript" type="text/javascript">
-        document.location = "https://ar.werk39.rocks/ar_marker.html";
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="gesture-detector.js"></script>
+    <script src="gesture-handler.js"></script>
 </head>
 
-<body>
 
+<body>
+    <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' gesture-detector id="scene">
+        <a-marker type="pattern" url="https://ar.werk39.rocks/assets/pattern-speedup_wallpaper.patt">
+            <a-entity gltf-model='https://ar.werk39.rocks/assets/speedupchange.gltf' scale="0.025 0.025 0.025" position="0 0 0" rotation="0 0 0" gesture-handler class="clickable">
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
 </body>
 
 </html>
