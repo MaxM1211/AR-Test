@@ -6,9 +6,8 @@ AFRAME.registerComponent("gesture-handler", {
         rotationFactor: { default: 5 },
         rotationFactor_y: { default: 1 },
         rotationFactor_x: { default: 1 },
-        rotationFactor_threshold: { default: 5 },
-        minScale: { default: 0.50 },
-        maxScale: { default: 4 },
+        minScale: { default: 0.75 },
+        maxScale: { default: 6 },
     },
 
     init: function() {
@@ -45,12 +44,10 @@ AFRAME.registerComponent("gesture-handler", {
 
     handleRotation: function(event) {
         if (this.isVisible) {
-            change_y = event.detail.positionChange.x * this.data.rotationFactor * this.data.rotationFactor_y;
-            change_x = event.detail.positionChange.y * this.data.rotationFactor * this.data.rotationFactor_x;
-            if (change_y >= this.rotationFactor_threshold)
-                this.el.object3D.rotation.y += change_y;
-            if (change_x >= this.rotationFactor_threshold)
-                this.el.object3D.rotation.x += change_x;
+            this.el.object3D.rotation.y +=
+                event.detail.positionChange.x * this.data.rotationFactor * this.data.rotationFactor_y;
+            this.el.object3D.rotation.x +=
+                event.detail.positionChange.y * this.data.rotationFactor * this.data.rotationFactor_x;
         }
     },
 
